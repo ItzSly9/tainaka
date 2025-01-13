@@ -32,10 +32,31 @@
             display: block;
             margin: 0 auto;
         }
-        #coming-soon {
-            font-size: 2em;
+        .nav-buttons {
+            margin: 20px 0;
+        }
+        .nav-buttons a {
+            display: block;
+            margin: 5px 0;
             color: #fff;
+            font-size: 1.5em;
+            text-decoration: none;
             text-shadow: 0 0 0.40em #ffffff;
+            cursor: pointer;
+        }
+        .nav-buttons a:hover {
+            color: #666666;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Aumentar el espacio entre las imágenes */
+            margin-top: 20px;
+        }
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
         }
         .snowflake {
             position: absolute;
@@ -60,14 +81,16 @@
 <body>
     <div class="container">
         <img class="hanginggirl animated infinite nodrag" draggable="false" src="assets/logopagina.png">
-        <div id="enter-remove">
-            <b class="begin">
-                <span id="enter-type-in" style="text-shadow: 0 0 0.40em #fff;"></span><br/>
-                <span id="enter" class="appear">[<span style="--color: #00ff00" class="glow-hover">YES</span>]</span> 
-                <span class="appear" onclick="redirectToInstagram()">[<span style="--color: #FF0000" class="glow-hover">NO</span>]</span>
-            </b><br/>
+        <div class="nav-buttons">
+            <a href="https://store.tainakaclothes.lat/">Home</a>
+            <a href="https://www.tainakaclothes.lat">Store</a>
+            <a href="https://www.tainakaclothes.lat/">Contact</a>
         </div>
-        <div id="coming-soon">I am alive<br>Coming soon...</div>
+        <div class="social-icons">
+            <img src="assets/instagram.png" alt="Instagram" onclick="window.location.href='https://www.instagram.com/tainaka.ar/'">
+            <img src="assets/tiktok.png" alt="TikTok" onclick="window.location.href='https://www.tiktok.com/@tainaka.ar'">
+            <img src="assets/youtube.png" alt="YouTube" onclick="window.location.href='https://www.youtube.com/channel/TainakaClothes'">
+        </div>
     </div>
     <audio id="audio" src="assets/1.mp3"></audio>
     <script src="assets/audio.js"></script>
@@ -94,11 +117,6 @@
         };
 
         setInterval(createSnowflake, 100);
-
-        // Redirect to Instagram
-        function redirectToInstagram() {
-            window.location.href = "https://www.instagram.com/tainaka.ar/";
-        }
     </script>
 </body>
 </html>
